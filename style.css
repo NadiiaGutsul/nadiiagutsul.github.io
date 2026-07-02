@@ -120,6 +120,7 @@ video {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
 
 .hero-left {
@@ -129,19 +130,37 @@ video {
 
 .hero-left h2 {
     color: #c8b2ff;
-    margin: 20px 0;
+    margin: 1rem 0;
     font-weight: 300;
     font-size: 2rem;
 }
 
 
 .hero-right {
-    width: 45%;
+    width: 70%;
 }
 
-.hero-right img {
-    width: 100%;
-    border-radius: 25px;
+.hero-right img{
+    width:100%;
+    display:block;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 20%,
+            black 90%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            black 20%,
+            black 90%,
+            transparent 100%
+        );
 }
 
 .grid {
@@ -150,9 +169,9 @@ video {
     grid-template-columns:
         repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 1.5rem;
 
-    margin-top: 40px;
+    margin-top: 1.5rem;
 }
 
 .card {
@@ -171,7 +190,8 @@ video {
 }
 
 .large {
-    grid-column: span 2;
+   
+    grid-row: span 3;
 }
 
 .full {
@@ -192,10 +212,10 @@ video {
 }
 
 .interests {
-    margin: 20px 0 0;
+    margin: 1rem 0 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
+    gap: 1rem;
 }
 
 .interest-card {
@@ -204,10 +224,10 @@ video {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 1rem;
 
     min-height: 96px;
-    padding: 15px;
+    padding: 1rem;
 
     border-radius: 15px;
     border: 1px solid rgba(180, 150, 255, .15);
